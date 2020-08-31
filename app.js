@@ -5,11 +5,11 @@ const blogroutes = require('./routes/blog')
 const app = express();
 
 app.set('view engine', 'ejs');
-const port = process.env.PORT ;
+const port = process.env.PORT || 3000;
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
-const dbURI = process.env.MONGO_URI;
+const dbURI = process.env.MONGO_URI || 'mongodb+srv://admin:learn123@learningcluster.dibp0.mongodb.net/learing?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useUnifiedTopology: true, useNewUrlParser: true })
     .then((result) => app.listen(port))
     .catch((err) => console.log(err));
