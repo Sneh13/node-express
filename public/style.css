@@ -14,16 +14,75 @@ header {
     flex-direction: column;
 }
 
+.logo {
+    font-size: 2rem;
+}
+
 .nav ul {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .nav ul li {
     list-style: none;
 }
 
-.nav ul li a {
+a {
     text-decoration: none;
+    text-transform: capitalize;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: auto;
+}
+
+form label {
+    padding: .1rem;
+}
+
+button {
+    padding: .5rem;
+    margin-top: 1rem;
+}
+
+main {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.fblog {
+    position: relative;
+}
+
+.delete {
+    position: absolute;
+    right: 5rem;
+    top: 2rem;
+    color: black;
+    background-color: lightcoral;
+    padding: .5rem;
+}
+
+.delete:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+.notfound {
+    text-align: center;
 }

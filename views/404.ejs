@@ -1,29 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('./partials/head.ejs') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 
-<body>
-    <header>
-        <div class="logo">
-            <a href="/">Logo</a>
-        </div>
-        <nav class="nav">
-            <u>
-                <li><a href="/">home</a></li>
-                <li><a href="/about">about</a></li>
-                <li><a href="/404">notfound</a></li>
-         
-            </u>
-        </nav>
-    </header>
-</body>
-<main>
-    <h1>oppps</h1>
-</main>
+    <body>
+        <%- include('./partials/nav.ejs')%>
+    </body>
+    <main>
+        <h1 class="notfound">404 | Not found</h1>
+    </main>
 
 </html>

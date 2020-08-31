@@ -7,13 +7,15 @@
         <%- include('./partials/nav.ejs')%>
     </body>
     <main>
-        <form action="">
-            <form action="/blogs" method="post"></form>
+
+
+        <form action="/blogs" method="post">
+            <h2> Create Blog</h2>
             <label for="blogTitle">Title</label>
             <input type="text" name="title" id="Title">
 
-            <label for="blogBody">Title</label>
-            <textarea id="blogBody" name="bodyd"></textarea>
+            <label for="blogBody">Body</label>
+            <textarea id="blogBody" name="body"></textarea>
 
             <button type="submit">submit</button>
         </form>
