@@ -1,18 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
-
-const Blog = require('./models/blog')
+const blogroutes = require('./routes/blog')
 
 const app = express();
 
-app.set('view engine', 'ejs')
-    // const PORT = 3000;
+app.set('view engine', 'ejs');
+const PORT = process.env.PORT || 3000;
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
-const dbURI = 'mongodb+srv://admin:learn123@learningcluster.dibp0.mongodb.net/learing?retryWrites=true&w=majority';
+const dbURI = process.env.MONGO_URI || 'mongodb+srv://admin:learn123@learningcluster.dibp0.mongodb.net/learing?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useUnifiedTopology: true, useNewUrlParser: true })
-    .then((result) => app.listen(3000))
+    .then((result) => app.listen(PORT))
     .catch((err) => console.log(err));
 
 
@@ -24,53 +23,7 @@ app.get('/about', (req, res) => {
     res.render('about', { title: 'about Page' })
 })
 
-app.get('/blogs', (req, res) => {
-    Blog.find()
-        .then((result) => {
-            res.render('index', { title: 'all blog', blogs: result })
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-})
-
-app.post('/blogs', (req, res) => {
-    const blog = new Blog(req.body);
-    blog.save()
-        .then((result) => {
-            res.redirect('/blogs')
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-})
-
-app.get('/blogs/create', (req, res) => {
-    res.render('create', { title: 'create blog' })
-})
-
-app.get('/blogs/:id', (req, res) => {
-    const id = req.params.id;
-    Blog.findById(id)
-        .then((result) => {
-            res.render('fullblog', { title: 'all blog', blog: result })
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-})
-
-app.get('/blogs/:id', (req, res) => {
-    const id = req.params.id;
-    Blog.findByIdAndDelete(id)
-        .then(result => {
-            res.json({ redirect: '/blogs' })
-        })
-        .catch(err => {
-            cosnsole.log(err)
-        })
-})
-
+app.use('/blogs', blogroutes.routes)
 
 app.use((req, res) => {
     res.render('404', { title: 'not Found' })
