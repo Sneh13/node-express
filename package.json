@@ -1,29 +1,19 @@
 {
-    "name": "nodexapp",
-    "version": "1.0.0",
-    "description": "",
-    "main": "app.js",
-    “scripts”: {
-        “start”: “node index.js”
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/synicalsyntax/discord.js-heroku.git"
-    },
-    "keywords": [
-        "heroku",
-        "nodexapp"
-    ],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "ejs": "^3.1.5",
-        "express": "^4.17.1",
-        "mongoose": "^5.10.0",
-        "nodemon": "^2.0.4"
-    },
-    "engines": {
-        "node": "10.16.3",
-        "npm": "6.9.0"
+  "name": "nodexapp",
+  "version": "1.0.0",
+  "description": "blog app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "author": "sneh13",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.2"
   }
 }
