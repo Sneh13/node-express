@@ -19,6 +19,5 @@ I have use mongodb atlas to save databse and mongoose for interacting with datab
 //mvc
 i learn MVC ethodology and how it make code simple and clean
 
-//deploy
-alreay have deployed on Heroku but it gkeeps givibg me application error. //need to fix
-https://nodexapp.herokuapp.com/
+//deployed on Glitch
+https://pentagonal-speckle-gate.glitch.me/
