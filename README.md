@@ -20,4 +20,6 @@ I have use mongodb atlas to save databse and mongoose for interacting with datab
 i learn MVC ethodology and how it make code simple and clean
 
 //deployed on Glitch
-https://pentagonal-speckle-gate.glitch.me/
+
+project page :https://glitch.com/~harvest-even-shame
+live on: https://harvest-even-shame.glitch.me
