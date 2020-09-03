@@ -21,5 +21,5 @@ i learn MVC ethodology and how it make code simple and clean
 
 //deployed on Glitch
 
-project page :https://glitch.com/~harvest-even-shame
+project page :https://glitch.com/edit/#!/harvest-even-shame
 live on: https://harvest-even-shame.glitch.me
