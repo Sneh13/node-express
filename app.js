@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
-const dbURI = process.env.MONGO_URI || 'mongodb+srv://admin:learing123@learningcluster.dibp0.mongodb.net/learing?retryWrites=true&w=majority';
+const dbURI = process.env.MONGO_URI ;
 mongoose.connect(dbURI, { useUnifiedTopology: true, useNewUrlParser: true })
     .then((result) => app.listen(port))
     .catch((err) => console.log(err));
